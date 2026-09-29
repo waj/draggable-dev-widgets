@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Draggable Dev Widgets",
+  "version": "1.1.0",
+  "description": "Drag the Elm debugger and json-render devtools widgets out of the way. Alt+double-click one to reset its position.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "file:///*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}
